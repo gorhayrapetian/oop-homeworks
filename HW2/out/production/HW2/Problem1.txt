@@ -1,0 +1,23 @@
+Determine the Java type and the value for each expression below and all its
+subexpressions:
+
+(a) 17L / 3
+Long, since 17 / 3 is 5 with a remainder, but since the result type is Long the answer is just 5
+
+(b) 0xABBA % 3.7
+Double, since the operation is done with a double
+
+(c) (char)(( ’a ’ + ’z ’) / 2)
+Since 'a' + 'z' equals 195, and when divided by 2, it becomes 97, but the
+result is m which is Char since the result is casted to Char (in ASCII 97 is m)
+
+(d) 3 == 3.0 f && ’0’ <= ’A’
+Type boolean, the result is true, since the left hand side is true and the right hand side is true, true and true gives true
+
+(e) ~ (-0b101101) + 1
+The type is int, the one's complement of ~ (-0b101101) is 44 adding 1 gives 45
+
+(f) !( -5 % 2 == 1 || 2_147_483_647 + 1 < 0)
+Bolean false, since the left hand side is true, the right hand side is also true, 
+because 2_147_483_647 is the biggest integer possible adding one gives -2147483648,
+which is less than 0, so both sides are true but the Not operand makes it false
